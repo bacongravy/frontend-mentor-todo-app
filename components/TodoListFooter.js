@@ -15,12 +15,13 @@ const TodoListFooter = (props) => {
       fontSize={{ base: "xs", md: "sm" }}
       {...rest}
     >
-      <Text>{`${count} item${count != 1 ? "s" : ""} left`}</Text>
+      <Text flex="1">{`${count} item${count != 1 ? "s" : ""} left`}</Text>
       {children}
-      <Button
+      <Button flex="1"
         variant="unstyled"
         fontSize={{ base: "xs", md: "sm" }}
         transition=""
+        textAlign="right"
         fontWeight="normal"
         _hover={{ color: useColorModeValue("light.700", "dark.300") }}
         onClick={onClear}
