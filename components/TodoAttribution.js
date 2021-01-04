@@ -22,7 +22,7 @@ const TodoAttribution = (props) => {
         Challenge by{" "}
         <Link
           textDecoration="underline"
-          href="https://www.frontendmentor.io?ref=challenge"
+          href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW"
           target="_blank"
         >
           Frontend Mentor
