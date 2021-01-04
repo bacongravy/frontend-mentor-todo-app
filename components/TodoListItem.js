@@ -17,6 +17,7 @@ export const TodoListItem = ({
       fontSize={{ base: "xs", md: "18px" }}
       height={{ base: "54px", md: "62px" }}
       width="100%"
+      marginTop="-1px"
       paddingX={{ base: "5", md: "6" }}
       justifyContent="space-between"
       borderTop="1px"
