@@ -1,20 +1,21 @@
 import { VStack, Box } from "@chakra-ui/react";
 import "focus-visible/dist/focus-visible";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { SortableContainer, SortableElement } from "react-sortable-hoc";
 import update from "immutability-helper";
 import { v4 as uuidv4 } from "uuid";
 
-import useLocalState from "../hooks/useLocalState"
+import useLocalState from "../hooks/useLocalState";
 import TodoBackground from "./TodoBackground";
 import TodoTopBar from "./TodoTopBar";
 import TodoInput from "./TodoInput";
-import TodoListFooter from "./TodoListFooter";
-import TodoBottomText from "./TodoBottomText";
-import TodoFilterRadioGroup from "./TodoFilterRadioGroup";
-import TodoBottomBar from "./TodoBottomBar";
-import TodoListItem from "./TodoListItem";
 import TodoList from "./TodoList";
+import TodoListItem from "./TodoListItem";
+import TodoListFooter from "./TodoListFooter";
+import TodoBottomBar from "./TodoBottomBar";
+import TodoFilterRadioGroup from "./TodoFilterRadioGroup";
+import TodoBottomText from "./TodoBottomText";
+import TodoAttribution from "./TodoAttribution";
 
 const DEFAULT_ITEMS = [
   { id: uuidv4(), text: "Complete online JavaScript course", completed: true },
@@ -33,9 +34,9 @@ const SortableTodoList = SortableContainer(TodoList);
 const SortableTodoListItem = SortableElement(TodoListItem);
 
 const Todo = () => {
-  const [items, setItems] = useLocalState("todo-items", DEFAULT_ITEMS)
+  const [items, setItems] = useLocalState("todo-items", DEFAULT_ITEMS);
   const [filterSelection, setFilterSelection] = useState("all");
-  
+
   const activeCount = items.filter((item) => !item.completed).length;
 
   const addTodo = useCallback(
@@ -132,6 +133,10 @@ const Todo = () => {
           />
         </TodoBottomBar>
         <TodoBottomText paddingTop={{ base: "7", md: "8" }} />
+        <TodoAttribution
+          paddingTop={{ base: "4", md: "6" }}
+          paddingBottom="8"
+        />
       </VStack>
     </TodoBackground>
   );
