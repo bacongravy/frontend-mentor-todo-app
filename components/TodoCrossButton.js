@@ -3,7 +3,7 @@ import CrossIcon from "./CrossIcon";
 
 const TodoCrossButton = (props) => {
     return (
-      <Button variant="unstyled" minWidth="" transition="" {...props}>
+      <Button variant="unstyled" minWidth="0" transition="" {...props}>
         <CrossIcon />
       </Button>
     );
