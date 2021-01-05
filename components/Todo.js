@@ -90,9 +90,10 @@ const Todo = () => {
         <Box height={{ base: "32px", md: "62px" }} />
         <TodoTopBar />
         <Box height={{ base: "14px", md: "20px" }} />
-        <TodoInput onCommit={addTodo} />
+        <TodoInput role="form" onCommit={addTodo}/>
         <Box height={{ base: undefined, md: "8px" }} />
         <SortableTodoList
+          role="main"
           items={items}
           shouldCancelStart={({ target }) =>
             target.closest("label") || target.closest("button")
