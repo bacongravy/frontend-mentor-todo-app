@@ -18,7 +18,7 @@ const TodoTopBar = () => {
       >
         TODO
       </Heading>
-      <Button variant="unstyled" minW="" onClick={toggleColorMode}>
+      <Button aria-label="Toggle color mode" variant="unstyled" minW="" onClick={toggleColorMode}>
         <ColorModeIcon
           display="inline-block"
           boxSize={{ base: "20px", md: "25px" }}
