@@ -1,6 +1,6 @@
 import {
-  Box,
   HStack,
+  Flex,
   Text,
   useColorModeValue,
   useRadioGroup,
@@ -20,10 +20,8 @@ const TodoFilterRadioGroup = (props) => {
   const { getRootProps, getRadioProps } = useRadioGroup(radioGroup);
   const group = getRootProps();
   return (
-    <Box as="fieldset">
-      <VisuallyHidden>
-        <Text as="legend">Filter:</Text>
-      </VisuallyHidden>
+    <Flex as="fieldset">
+      <VisuallyHidden as="legend">Filter:</VisuallyHidden>
       <HStack
         {...group}
         fontSize="sm"
@@ -42,7 +40,7 @@ const TodoFilterRadioGroup = (props) => {
           Completed
         </TodoFilterRadio>
       </HStack>
-    </Box>
+    </Flex>
   );
 };
 
