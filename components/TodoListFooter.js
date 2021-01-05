@@ -20,7 +20,7 @@ const TodoListFooter = (props) => {
       <Button flex="1"
         variant="unstyled"
         fontSize={{ base: "xs", md: "sm" }}
-        transition=""
+        transition="all"
         textAlign="right"
         fontWeight="normal"
         _hover={{ color: useColorModeValue("light.700", "dark.300") }}

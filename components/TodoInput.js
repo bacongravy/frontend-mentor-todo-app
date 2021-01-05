@@ -47,7 +47,7 @@ const TodoInput = (props) => {
         paddingTop="1px"
         placeholder="Create a new todo..."
         _placeholder={{ color: useColorModeValue("light.600", "dark.400") }}
-        transition=""
+        transition="all"
         fontSize={{ base: "xs", md: "18px" }}
         color="light.700"
         css={{ caretColor }}
