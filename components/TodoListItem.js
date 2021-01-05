@@ -38,6 +38,7 @@ export const TodoListItem = ({
         {text}
       </TodoCheckbox>
       <TodoCrossButton
+        aria-label="Clear todo"
         className="todo-cross-button"
         onClick={(e) => {
           const index = parseInt(
